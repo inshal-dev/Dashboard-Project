@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.card{
+ border-radius: 10px;
+ background-color: rgba(57, 57, 57, 1);
+ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+ transition: 0.3s; 
+
+}
+.form-select{
+  border-radius: 20px;
+  height: 40px;
+}
+.items{
+  border-radius: 20px;
+}
+#cards{
+  display: flex;
+  display: inline-block;
+}

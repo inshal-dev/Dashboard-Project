@@ -1,0 +1,13 @@
+<div class='container'>
+  <h1>Hello Welcome to the ebola</h1>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium vitae eligendi ipsa unde cum impedit sapiente nisi dolor, voluptas, est laboriosam eum hic facere iste harum. Velit quisquam consectetur dolor.</p>
+  <div class="object" ng-show="graph.visible">
+    <canvas id="charts" width="300px" height="200px"></canvas>
+  </div>
+  <ul *ngFor="let items of plagueItems">
+    <li>Years: {{items.Years}}</li>
+    <li>Cases: {{items.TotalCases}}</li>
+   <li>Death:{{items.TotalDeaths}}</li>
+  </ul>
+
+</div>

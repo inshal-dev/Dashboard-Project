@@ -1,0 +1,17 @@
+<div class="nbutton"  [ngStyle]='buttonAlign'>
+  <button class="btn btn-outline-warning" routerLink="/info-component" routerLinkActive="Active"  [ngStyle]='buttonSpace' style="color: yellow;">Covid-19</button>
+  <button class="btn btn-outline-info" routerLink="/ebolaComponent" routerLinkActive="Active" [ngStyle]='buttonSpace'>Ebola</button>
+  <button class="btn btn-outline-danger" routerLink="/spanish-component" routerLinkActive="Active">Spanish</button>
+</div>
+<div class="wrapper" (click)="review()">
+
+  <div class="item" *ngFor="let sent of reviews">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{sent.DiseaseType}}</h5>
+        <p class="card-text">{{sent.Review}}</p>
+      </div>
+    </div> 
+  </div>
+  
+</div>

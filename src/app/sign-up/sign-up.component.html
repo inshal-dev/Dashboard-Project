@@ -1,0 +1,97 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col col-6 offset-3">
+      <div class="card">
+        <div class="card-header text-center text-uppercase">
+          Sign Up Please
+        </div>
+
+        <div class="card-body">
+            <div class="form-group row">
+              <label for="email" class="col-sm-3 col-form-label">Email</label>
+              <div class="col-sm-9">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  [(ngModel)]="email"
+                  placeholder="Enter Email"
+                  required
+                />
+              </div>
+              <p>{{error}}</p>
+            </div>
+           
+            <div class="form-group row">
+              <label for="password" class="col-sm-3 col-form-label">Password</label>
+              <div class="col-sm-9">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  [(ngModel)]="password"
+                  placeholder="Enter password"
+                  required
+                />
+              </div>
+            </div>
+            <div class="text-center">
+              <button class="btn btn-primary" type="submit" (click)="Register()">
+                Sign Up
+              </button>
+            </div>
+            <div class="text-center mt-3">
+              Login or Register through google 
+            </div>
+            <div class="register text-center mt-2">
+              <a (click)="GoogleLogin()">
+                <img src="https://img.icons8.com/fluent/35/000000/google-logo.png"/>
+               </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div>
+    </div>
+  </div>
+  </div>
+<!--
+  <div class="img-bg">
+    <div class="Login-box" >
+    <h2>Login Here</h2>
+    <div class="textbook">
+        <i class="fas fa-user"></i>
+        <input type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        [(ngModel)]="email"
+        placeholder="Enter Email"
+        required>
+
+
+    </div>
+    <div class="textbook">
+        <i class="fas fa-lock"></i>
+        <input type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        [(ngModel)]="password"
+        placeholder="Enter password"
+        required>
+    </div>
+   
+    <input type="button" class="btn btn-outline-light" value="Login" style="margin-top: 35px;">
+
+    <div class="register text-center mt-2">
+        <a (click)="GoogleLogin()">
+          <img src="https://img.icons8.com/fluent/35/000000/google-logo.png"/>
+         </a>
+      </div>
+    </div>
+    
+</div>
+-->

@@ -1,0 +1,43 @@
+button{
+    width: 300px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 40px;
+}
+.nbutton{
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: -50px;
+    border : 1px solid #ddd;
+    border-radius: 10px;
+    display:flex;
+    overflow-x: auto; 
+}
+.wrapper::-webkit-scrollbar{
+    width: 0;
+}
+.wrapper::-webkit-scrollbar-thumb{
+    background: linear-gradient((transparent, #30ff00));
+    border-radius: 6px;
+}
+.wrapper::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient((transparent, #30ff00));
+    
+}
+.wrapper .item{
+    min-width: 500px;
+    width: auto;
+    height: auto;
+    line-height: 30px;
+    text-align: center;
+}
+.card{
+    margin: 10px;
+    height: 300px;
+}

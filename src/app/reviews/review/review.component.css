@@ -1,0 +1,34 @@
+.wrapper{
+    margin-left: 50px;
+    margin-right: 50px;
+    border : 1px solid #ddd;
+    border-radius: 10px;
+    display:flex;
+    overflow-x: auto; 
+}
+.wrapper::-webkit-scrollbar{
+    width: 0;
+}
+.wrapper::-webkit-scrollbar-thumb{
+    background: linear-gradient((transparent, #30ff00));
+    border-radius: 6px;
+}
+.wrapper::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient((transparent, #30ff00));
+    
+}
+.wrapper .item{
+    min-width: 500px;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+.card{
+    margin: 40px;
+    border-radius: 30px;
+    width: 400px;
+ 
+    background-color: #000000;
+    background-image: linear-gradient(90deg, #000000 0%, #818181 100%);
+    
+}

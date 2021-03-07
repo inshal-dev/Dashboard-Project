@@ -1,0 +1,103 @@
+<div class="box d-flex justify-content-center">
+  <select class="form-select" aria-label="Default select example" [(ngModel)]="selectCountry">
+    <option class="items" *ngFor="let items of countryName" >{{items.Country}}</option>
+  </select>
+  <button  type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="getCountryValue(selectCountry.value)">Submit</button> 
+</div>
+  
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="mt-2" style="width: 500px; height: 300px;">
+           <div class="cont">
+             <div class="object" ng-show="graph.visible">
+             <canvas id="detailedBarChart"></canvas>
+         </div>
+         </div>
+       </div>
+       <div class="mt-2" style="width: 500px; height: 300px;">
+        <div class="cont">
+          <div class="object" ng-show="graph.visible">
+          <canvas id="detailedLineChart"></canvas>
+         </div>
+        </div>
+        </div>
+        <div class="card container text-white" id="cards" style="width: 18rem;" *ngFor="let count of ConvertedData ">
+          <div class="card-body ">
+            <h5 class="card-title">{{count.Country}}</h5>
+            <h6 class="card-text ">{{count.Date | date}}</h6>
+            <p class="card-text">{{count.Confirmed |number}}</p>
+            <p class="card-text">{{count.Deaths | number}}</p>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--Main Page (charts)-->
+<div class="container">
+  <div class="card mt-2" style="width: 500px; height: 300px;">
+    <div class="cont">
+      <div class="object" ng-show="graph.visible">
+        <canvas id="mychart"></canvas>
+      </div>
+  </div>
+  </div>
+
+  <div class="card mt-2" style="width: 500px; height: 300px;">
+    <div class="cont">
+      <div class="object" ng-show="graph.visible">
+        <canvas id="polarchart"></canvas>
+      </div>
+  </div>
+  </div>
+
+  <div class="card mt-2" style="width: 500px; height: 300px;">
+    <div class="cont">
+      <div class="object" ng-show="graph.visible">
+        <canvas id="radarchart"></canvas>
+      </div>
+  </div>
+  </div>
+  <div class="card mt-2" style="width: 500px; height: 300px;">
+    <div class="cont">
+      <div class="object" ng-show="graph.visible">
+        <canvas id="barchart" ></canvas>
+      </div>
+  </div>
+  </div>
+
+</div>
+<div class="alert alert-success btn-outline-success text-center mt-3" role="alert">
+  Table Form Data for Covid-19 
+</div>
+<div class="container d-flex justify-content-center text-center mt-2 " style="width: 700px;">
+  <div class="jumbotron">
+    <table class="table ">  
+      <thead>
+        <tr>
+          <th scope="col">Country Name</th>
+          <th scope="col">Total Confirmed Cases</th>
+          <th scope="col">Total Death Cases</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let x of countryName">
+        <tr>
+          <td>{{x.Country}}</td>
+          <td>{{x.TotalConfirmed | number}}</td>
+          <td>{{x.TotalDeaths | number}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> 

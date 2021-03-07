@@ -1,0 +1,19 @@
+
+
+<div class="wrapper">
+  <div class="item text-white" *ngFor="let sent of reviews">
+    <div class="card ">
+      <div class="card-body">
+
+        <h5>{{sent.UserName}}</h5>
+        <h5 class="card-title">{{sent.DiseaseType}}</h5>
+        <p class="card-text">{{sent.Review}}</p>
+      </div>
+    </div> 
+  </div>
+</div>
+<div class="container mt-3 d-flex justify-content-center">
+ 
+  <button class="btn btn-outline-primary" (click)="addreview()">Add Review</button>
+</div>
+

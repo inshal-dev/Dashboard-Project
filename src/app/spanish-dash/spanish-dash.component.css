@@ -1,0 +1,14 @@
+.wrapper{
+  margin-left: 200px;
+  margin-right: 50px;
+  border-radius: 10px;
+  display:flex;
+}
+
+.card{
+  margin-left: 30px;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  display: flex;
+}
