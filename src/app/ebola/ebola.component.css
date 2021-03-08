@@ -1,6 +1,7 @@
 
   /* More-Info */
   .col-sm {
+      padding: 20px;
     margin-top: 20px;
     border: 1px solid yellow;
     border-radius: 10px;
@@ -19,12 +20,7 @@
   }
   /* info */
   
-  #num{
-    margin-top: 50px;
-  }
-  #top{
-    margin-top: 100px ;
-  }
+
   #seemore{
     font-weight: lighter;
     color: white;
@@ -34,6 +30,20 @@ ul{
   list-style: none;
 }
 .card{
+  margin: 10px;
+  padding: 10px;
   background: rgb(66,66,66);
 background: linear-gradient(90deg, rgba(66,66,66,1) 0%, rgba(68,67,67,1) 100%);
+}
+h3{
+    margin: 30px;
+}
+#intialDisease{
+  border: 1px solid greenyellow;
+}
+#typeDisease{
+  border: 1px solid rgb(255, 238, 6);
+}
+#effectDisease{
+  border: 1px solid rgba(255, 84, 17, 0.966);
 }

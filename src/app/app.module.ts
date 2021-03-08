@@ -3,12 +3,11 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { MatSliderModule } from '@angular/material/slider';
 
 import { DashComponent } from './dash/dash.component';
 import { DiseaseTypeComponent } from './disease-type/disease-type.component';
-import { InfoComponent } from './info/info.component';
+import {InfoComponent} from './Covid/info.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TableComponent } from './table/table.component';
 import { EbolaDashComponent } from './ebola-dash/ebola-dash.component';
@@ -21,6 +20,7 @@ import { ApiService } from './services/api.service';
 import { PlagueService } from './services/plague.service';
 import { AppDashboardComponent } from './app-dashboard/app-dashboard.component';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatSortModule} from '@angular/material/sort';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FooterNavComponent } from './footer-nav/footer-nav.component';
 import { FormComponent } from './form/form.component';
@@ -37,12 +37,14 @@ import {environment} from "../environments/environment";
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { UserdetailComponent } from './userdetail/userdetail.component';
+import { PlagueComponent } from './plague/plague.component';
+import { PlagueDashComponent } from './plague-dash/plague-dash.component';
+import { EbolaComponent } from './ebola/ebola.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BarChartComponent,
     DashComponent,
     DiseaseTypeComponent,
     InfoComponent,
@@ -55,6 +57,9 @@ import { UserdetailComponent } from './userdetail/userdetail.component';
     FormComponent,
     SignUpComponent,
     UserdetailComponent,
+    PlagueComponent,
+    PlagueDashComponent,
+    EbolaComponent,
     
   ],
   imports: [
@@ -70,6 +75,7 @@ import { UserdetailComponent } from './userdetail/userdetail.component';
     ReactiveFormsModule,
     ToastrModule.forRoot(),
     MatCardModule,
+    MatSortModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,

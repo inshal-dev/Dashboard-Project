@@ -31,9 +31,9 @@ list-style: none;
 }
 .card{
   margin: 10px;
-  padding: 10px;
-  background: rgb(66,66,66);
-  background: linear-gradient(90deg, rgba(66,66,66,1) 0%, rgba(68,67,67,1) 100%);
+background: rgb(66,66,66);
+background: linear-gradient(90deg, rgba(66,66,66,1) 0%, rgba(68,67,67,1) 100%);
+padding: 20px;
 }
 h3{
   margin: 30px;

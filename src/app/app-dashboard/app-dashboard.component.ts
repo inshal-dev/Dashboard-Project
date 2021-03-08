@@ -42,16 +42,19 @@ export class AppDashboardComponent {
     private toastr: ToastrService
   ){ 
   }
+
   //Modal Open
   openModal(){
     $('#staticBackdrop').modal('show')
     }
+
   // Country Data from Day one
   getCountryValue(selectCountry:any){
     this.apiService.getValueCountry(this.selectCountry)
     this.dataSelectedCountry();
     this.openModal()
   }
+
   ngOnInit(): void {
     // api data of country for table view
     this.apiService.getData().toPromise().then((response)=>{
@@ -65,10 +68,8 @@ export class AppDashboardComponent {
       console.log(err);
       this.toastr.error("API is Down")
       this.toastr.info("For Data we are using a open source API of Covid-19")
-    })
-    ;
-    
-    
+    });
+   
   }
  // Main Data Of Covid-19 in charts form
   mychart(newTc:number, newTr:number, newTd:number){
@@ -351,7 +352,7 @@ lineChartDetail(dates:Date, tConfirmed:number, tRecovered:number, tDeaths:number
       this.ConvertedData = JSON.parse(this.totalData)
       let globalData = this.ConvertedData;
     })
-   
-  
   }
+
+
 }
