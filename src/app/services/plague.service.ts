@@ -14,5 +14,7 @@ export class PlagueService {
   GetPlague(){
     return this.http.get('assets/Plague.json');
   }
- 
+  GetEbola(){
+    return this.http.get('assets/ebola.json');
+  }
 }

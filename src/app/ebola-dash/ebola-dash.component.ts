@@ -10,7 +10,7 @@ import { PlagueService } from '../services/plague.service';
 })
 export class EbolaDashComponent implements OnInit {
  items:any
- plagueItems:any;
+ ebolaItems:any;
  dataPlague:any
  Cases:any;
  TotalCases:any
@@ -33,16 +33,17 @@ export class EbolaDashComponent implements OnInit {
    
   }
   DataPlagues(){
-    this.dataPlague= this.PlagueService.GetPlague().subscribe(
-      data =>{
-        this.items = JSON.stringify(data)
-        this.plagueItems = JSON.parse(this.items)
-        console.log(this.plagueItems)
-        this.Cases = JSON.stringify(this.plagueItems);
-        this.TotalCases = JSON.parse(this.Cases);
-        console.log(this.TotalCases)
-      }
-    )
+    this.PlagueService.GetEbola()
+      // data =>{
+      //  this.items = JSON.stringify(data)
+      //   this.ebolaItems = JSON.parse(this.items)
+      //  // console.log(this.ebolaItems)
+      //   let global = this.ebolaItems;
+      //   this.TotalCases = global.Date;
+      //   console.log(this.TotalCases)
+        // console.log(data)
+      
+    
   }
  
 

@@ -1,29 +1,9 @@
-<div class="flex-container">
-    <div class=" card flex-child" id="card1" >
-        <form [formGroup]="this.form" >
-            <div class="form-group">
-              <label for=""></label>
-              <select class="form-control" name="" id="" formControlName="diseaseType">
-                <option>Covid 19</option>
-                <option>Ebola</option>
-                <option>Spanish</option>
-              </select>
-              <div class="mt-2">
-              <input type="text" formControlName="diseaseType">
-            </div>
-            </div>
-            
-            <div class="form-group">
-              <label for="Review">Review</label>
-              <textarea class="form-control" formControlName="review"  name="" id="Review" rows="3"></textarea>
-            </div>
-            <div>
-                <button class="btn btn-primary" (click)="SubmitReview()">Submit</button>
-            </div>
-        </form>
-    </div>
 
-<div class="card flex-child" style="width: 18rem; height: 20rem;">
+
+<div class="row text-center text-white">
+
+<div class="card-sample ">
+  <div class="card " style="width: 18rem; height: 20rem;">
     <div class="card-body">
       <h5 class="card-title">
           <div class="chip">
@@ -35,3 +15,85 @@
     </div>
   </div>
 </div>
+<div class="card" id="card-form">
+  <h5 class="m-3">Add Sentiments</h5>
+  <form [formGroup]="this.form" >
+    <div class="form-group">
+      <label for="">Select the Disease</label>
+      <select class="form-control" name="" id="" formControlName="diseaseType" >
+        <option>Covid 19</option>
+        <option>Ebola</option>
+        <option>Plague</option>
+      </select>
+      <div class="mt-2">
+      <input type="text" formControlName="diseaseType" placeholder="Other Disease">
+    </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="Review">Sentiments</label>
+      <textarea class="form-control" formControlName="review" placeholder="Add Sentiments Here" name="" id="Review" rows="4"></textarea>
+    </div>
+    <div>
+        <button class="btn btn-outline-primary" (click)="SubmitReview()">Post</button>
+    </div>
+</form> 
+</div>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--  -->
+
+
+
+        <!-- -->
+ 
+  
+
+
+

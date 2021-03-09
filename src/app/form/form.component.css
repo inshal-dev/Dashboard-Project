@@ -1,16 +1,32 @@
-.flex-container {
-    margin: 50px;
-    display: flex;
+.card{
+  border-radius: 10px;
+  margin: 60px;
+  background-color: #474747;
+  background-image: linear-gradient(70deg, #474747 0%, #565656 30%, #5e5d5d 66%, #686868 100%);
+  box-shadow: 1px 1px rgb(19, 19, 19);
 }
-.flex-child {
-    flex: 1;    
-}  
-.flex-child:first-child {
-    margin-right: 20px;
-} 
-#card1{
-    height: 320px;
+#card-form{
+    padding: 20px;
+    width: 600px;
+    height: 500px;
 }
-.form-group{
-    margin: 20px;
+#card-sample{
+    
+    margin: 30px;
+    padding: 20px;
+    border-radius: 20px;
+   
+}
+input{
+    background: transparent;
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid #FFFEFE;
+}
+textarea{
+    height: 200px;
+    background-color: transparent;
+}
+select{
+    background-color: transparent;
 }
