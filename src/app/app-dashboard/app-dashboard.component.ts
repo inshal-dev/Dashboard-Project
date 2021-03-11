@@ -268,7 +268,94 @@ barChartDetail(dates:Date, tConfirmed:number, tRecovered:number, tDeaths:number)
           
       },
       options:{
-        legend:{position:"left"},
+        legend:{position:"bottom"},
+        responsive: true,
+        scales: {
+          xAxes: [ {
+              display: true,
+              type: 'time',
+            }
+          ],
+        
+        }
+      }
+      }
+  );
+}
+horiChartDetail(dates:Date, tConfirmed:number, tRecovered:number, tDeaths:number){
+  this.canvas = document.getElementById('HoriChart');
+  this.ctx = this.canvas.getContext('2d');
+  
+  var myChart = new Chart(this.ctx, {
+      type: 'radar',
+      data: {
+          labels: this.dataSelected,
+          datasets: [{
+              label: 'Confirm Cases',
+              data: this.totalConfirm,
+              backgroundColor:'#DDD101',
+              borderColor:'#DDD101',
+              fill: false
+          },
+        {
+          label: 'Recovered Cases',
+              data: this.totalRecovered,
+              backgroundColor:'#00D84A',
+              borderColor:'#00D84A',
+              fill:false
+        },
+      {
+        label: 'Death Cases',
+              data: this.totalDeath,
+              backgroundColor:'#E21717',
+              borderColor:'#E21717',
+              fill:false
+      }],
+          
+      },
+      options:{
+        legend:{position:"bottom"},
+        responsive: true,
+      
+      }
+      }
+  );
+}
+lineSteppedChart(dates:Date, tConfirmed:number, tRecovered:number, tDeaths:number){
+  this.canvas = document.getElementById('lineStepped');
+  this.ctx = this.canvas.getContext('2d');
+  
+  var myChart = new Chart(this.ctx, {
+      type: 'line',
+      data: {
+          labels:this.dataSelected,
+          datasets: [{
+              label: 'Confirm Cases',
+              data: this.totalConfirm,
+              backgroundColor:'#DDD101',
+              borderColor:'#DDD101',
+              fill: false,
+              steppedLine:true
+          },
+         {
+             label: 'Death Cases',
+              data: this.totalDeath,
+              backgroundColor:'#00D84A',
+              borderColor:'#00D84A',
+              fill:false,
+              steppedLine:true
+          },
+          {
+            label: 'Recovered Cases',
+             data: this.totalRecovered,
+             backgroundColor:'#FF3333',
+             borderColor:'#FF3333',
+             fill:false,
+             steppedLine:true
+         }],
+      },
+      options:{
+        legend:{position:"bottom"},
         responsive: true,
         scales: {
           xAxes: [ {
@@ -294,24 +381,27 @@ lineChartDetail(dates:Date, tConfirmed:number, tRecovered:number, tDeaths:number
               label: 'Confirm Cases',
               data: this.totalConfirm,
               backgroundColor:'#DDD101',
+              borderColor:'#DDD101',
               fill: false
           },
         {
           label: 'Recovered Cases',
               data: this.totalRecovered,
               backgroundColor:'#00D84A',
+              borderColor:'#00D84A',
               fill:false
         },
       {
         label: 'Death Cases',
               data: this.totalDeath,
               backgroundColor:'#E21717',
+              borderColor:'#E21717',
               fill:false
       }],
           
       },
       options:{
-        legend:{position:"left"},
+        legend:{position:"bottom"},
         responsive: true,
         scales: {
           xAxes: [ {
@@ -346,8 +436,9 @@ lineChartDetail(dates:Date, tConfirmed:number, tRecovered:number, tDeaths:number
       })
 
       this.barChartDetail(this.dataSelected,this.totalConfirm, this.totalRecovered, this.totalDeath);
-      this.lineChartDetail(this.dataSelected,this.totalConfirm, this.totalRecovered, this.totalDeath)
-      
+      this.lineChartDetail(this.dataSelected,this.totalConfirm, this.totalRecovered, this.totalDeath);
+      this.lineSteppedChart(this.dataSelected,this.totalConfirm, this.totalRecovered, this.totalDeath);
+      this.horiChartDetail(this.dataSelected,this.totalConfirm, this.totalRecovered, this.totalDeath);
       this.totalData = JSON.stringify(Object(res));
       this.ConvertedData = JSON.parse(this.totalData)
       let globalData = this.ConvertedData;

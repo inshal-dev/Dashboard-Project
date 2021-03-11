@@ -19,10 +19,10 @@ import { UserdetailComponent } from './userdetail/userdetail.component';
 import { EbolaComponent } from './ebola/ebola.component';
 import { PlagueComponent } from './plague/plague.component';
 import { PlagueDashComponent } from './plague-dash/plague-dash.component';
-
+import { ProfileComponent } from './profile/profile.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['SignUp']);
-const redirectLoggedInToReview = () => redirectLoggedInTo(['Form']);
+const redirectLoggedInToReview = () => redirectLoggedInTo(['profile']);
 const routes: Routes = [
   { path: '', component: DashComponent },
   {path:'SignUp', component:SignUpComponent, canActivate: [AngularFireAuthGuard],  data: { authGuardPipe: redirectLoggedInToReview } },
@@ -38,7 +38,8 @@ const routes: Routes = [
   {path:'tableComponent', component: TableComponent},
   {path:'ebola-component', component: EbolaComponent},
   {path:'plague-component', component:PlagueComponent},
-  {path:'plague-dash', component:PlagueDashComponent}   
+  {path:'plague-dash', component:PlagueDashComponent},   
+  {path:'profile', component:ProfileComponent,canActivate: [AngularFireAuthGuard],  data: { authGuardPipe: redirectUnauthorizedToLogin }}   
 ];
 
 @NgModule({

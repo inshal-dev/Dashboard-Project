@@ -1,4 +1,11 @@
-.container{
-    width: auto;
-    color: white;
+
+.object{
+    padding: 20px;
 }
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 20px;
+  }

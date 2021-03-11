@@ -6,6 +6,7 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 import { Router } from '@angular/router';
 import { User } from '../Share/User';
 import { collectExternalReferences } from '@angular/compiler';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-sign-up',
@@ -29,7 +30,8 @@ export class SignUpComponent implements OnInit {
       public loginService: LoginService,
       private router : Router,
       public fireAuth: AngularFireAuth,
-      public fireStore : AngularFirestore
+      public fireStore : AngularFirestore,
+      public toastr : ToastrService
   ) { 
      }
  
@@ -39,12 +41,13 @@ export class SignUpComponent implements OnInit {
   Register(){
     this.loginService.signUpUser(this.email, this.password)
     .then((user)=>{ 
-      this.message = 'Register on Firebase'
-      
-      this.router.navigate(['detail-component'])
     }).catch(error=>{
+      this.toastr.info('Log')
+
      console.log(this.error)
+     
     })
+  this.router.navigate(['Form'])
   } 
   //signUp Form 
   GoogleLogin(){

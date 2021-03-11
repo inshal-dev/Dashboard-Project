@@ -40,6 +40,8 @@ import { UserdetailComponent } from './userdetail/userdetail.component';
 import { PlagueComponent } from './plague/plague.component';
 import { PlagueDashComponent } from './plague-dash/plague-dash.component';
 import { EbolaComponent } from './ebola/ebola.component';
+import { ProfileComponent } from './profile/profile.component';
+
 
 
 @NgModule({
@@ -60,6 +62,8 @@ import { EbolaComponent } from './ebola/ebola.component';
     PlagueComponent,
     PlagueDashComponent,
     EbolaComponent,
+    ProfileComponent,
+
     
   ],
   imports: [

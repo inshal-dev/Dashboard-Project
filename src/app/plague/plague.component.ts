@@ -23,6 +23,6 @@ export class PlagueComponent implements OnInit {
     "margin-top":'40px',
   }
 
-  confirmedCases: string = ' 475 Million'
-  deathCases: string = '50 Milion'
+  confirmedCases: string = '13,522'
+  deathCases: string = '1,621'
 }

@@ -13,6 +13,7 @@ declare var firebase:any;
   providedIn: 'root'
 })
 export class LoginService {
+  userName:any;
   logged:boolean =false;
   public user$: Observable<any>;
   constructor( 
@@ -64,5 +65,9 @@ export class LoginService {
    logOutUser(){
      return this.fireAuth.signOut();
    }
+ getEmailUser(){
+   this.userName = this.firestore.collection('user').snapshotChanges();
+   return this.userName
+ }
 
 }

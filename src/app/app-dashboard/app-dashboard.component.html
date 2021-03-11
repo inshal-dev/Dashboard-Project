@@ -12,25 +12,40 @@
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">Country-wise Details </h5>
         <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        
-        <div class="mt-2" style="width: 500px; height: 300px;">
+        <div class="container">
+        <div class=" card mt-2" style="width: 500px; height: 300px;">
            <div class="cont">
              <div class="object" ng-show="graph.visible">
              <canvas id="detailedBarChart"></canvas>
          </div>
          </div>
        </div>
-       <div class="mt-2" style="width: 500px; height: 300px;">
+       <div class=" card mt-2" style="width: 500px; height: 300px;">
         <div class="cont">
           <div class="object" ng-show="graph.visible">
           <canvas id="detailedLineChart"></canvas>
          </div>
         </div>
         </div>
+        <div class="card mt-2" style="width: 500px; height: 300px;">
+          <div class="cont">
+            <div class="object" ng-show="graph.visible">
+            <canvas id="HoriChart"></canvas>
+           </div>
+          </div>
+          </div>
+          <div class="card mt-2" style="width: 500px; height: 300px;">
+            <div class="cont">
+              <div class="object" ng-show="graph.visible">
+              <canvas id="lineStepped"></canvas>
+             </div>
+            </div>
+            </div>
+      </div>
         <div class="card container text-white" id="cards" style="width: 18rem;" *ngFor="let count of ConvertedData ">
           <div class="card-body ">
             <h5 class="card-title">{{count.Country}}</h5>
