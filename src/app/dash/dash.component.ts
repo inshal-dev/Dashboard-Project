@@ -47,8 +47,8 @@ export class DashComponent implements OnInit {
         this.linechart(this.newConfirm)
       }
     )
-
   }
+ 
   navigate(){
     this.router.navigate(['disease-component'])
   }
