@@ -9,7 +9,7 @@ import { convertToObject } from 'typescript';
   templateUrl: './ebola-dash.component.html',
   styleUrls: ['./ebola-dash.component.css']
 })
-export class EbolaDashComponent implements OnInit {
+export class EbolaDashComponent  {
  items:any
  ebolaItems:any;
  //Convert Data
@@ -33,7 +33,8 @@ export class EbolaDashComponent implements OnInit {
   ) { 
   }
  
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+ 
     this.DataPlagues();
     Chart.defaults.global.defaultFontColor = 'white';
     setTimeout(()=>{
