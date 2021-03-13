@@ -19,7 +19,8 @@ export class PlagueDashComponent implements OnInit {
    }
  
   ngOnInit(): void {
-    this.getPlague()
+    this.getPlague();
+    Chart.defaults.global.defaultFontColor = 'white';
     setTimeout(()=>{
       this.lineChartDetail();
       this.barChartDetail();

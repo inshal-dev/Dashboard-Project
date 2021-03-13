@@ -23,6 +23,7 @@ export class SpanishDashComponent implements OnInit {
   canvas:any;
   constructor() { }
   ngAfterViewInit() {
+    Chart.defaults.global.defaultFontColor = 'white';
     setTimeout(()=>{
       this.mychart();
       this.barChartDetail();

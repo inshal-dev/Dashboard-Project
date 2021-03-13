@@ -9,3 +9,6 @@
     flex-wrap: wrap;
     border-radius: 20px;
   }
+  .card{
+    background-color: rgba(57, 57, 57, 1);
+  }

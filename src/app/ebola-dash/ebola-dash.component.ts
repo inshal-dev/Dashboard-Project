@@ -35,6 +35,7 @@ export class EbolaDashComponent implements OnInit {
  
   ngOnInit(): void {
     this.DataPlagues();
+    Chart.defaults.global.defaultFontColor = 'white';
     setTimeout(()=>{
       this.lineChartGuinea();
       this.barChartGuinea();
