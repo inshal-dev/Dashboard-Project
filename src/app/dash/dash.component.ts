@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import {ApiService} from '../services/api.service';
 import {HttpClient} from '@angular/common/http';
 import { Chart }  from 'chart.js';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dash',
@@ -22,14 +23,17 @@ export class DashComponent implements OnInit {
   ctx:any;
   canvas:any;
 
-  constructor(private apiService:ApiService) { 
+  constructor(private apiService:ApiService,
+    public router:Router
+    ) { 
   }
   ngOnInit(): void {
-    
+    Chart.defaults.global.defaultFontColor = 'white';
     setTimeout(()=>{
       this.getCovid();
     },100);
   }
+  
   getCovid(){
     this.apiService.getData().subscribe(
       datas =>{
@@ -43,6 +47,10 @@ export class DashComponent implements OnInit {
         this.linechart(this.newConfirm)
       }
     )
+
+  }
+  navigate(){
+    this.router.navigate(['disease-component'])
   }
   mychart(newConfirm:any){
     this.canvas = document.getElementById('myChart');
@@ -79,7 +87,8 @@ export class DashComponent implements OnInit {
           cutoutPercentage: 70
       }
     });
-} linechart(newConfirm:any){
+} 
+linechart(newConfirm:any){
   this.canvas = document.getElementById('canvas');
   this.ctx = this.canvas.getContext('2d');
   var myChart = new Chart(this.ctx, {
@@ -143,7 +152,11 @@ export class DashComponent implements OnInit {
         rotation: 1 * Math.PI,
         circumference: 1 * Math.PI,
         responsive: true,
-        legend: { position: 'bottom',},
+      
+        legend: {
+          labels:{
+            fontColor:'White'
+          }, position: 'bottom',},
         title: { display: true, text: 'Cases Of Pandemic Diseases' },
         animation: { animateScale: true, animateRotate: true },
         cutoutPercentage: 70

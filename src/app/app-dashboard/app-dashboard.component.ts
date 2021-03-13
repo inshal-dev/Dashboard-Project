@@ -34,6 +34,7 @@ export class AppDashboardComponent {
    open:any;
   //call for charts and fetch api data
   ngAfterViewInit() {
+    Chart.defaults.global.defaultFontColor = 'white';
     setTimeout(()=>{
       this.init()
     },100);
@@ -103,7 +104,7 @@ export class AppDashboardComponent {
           rotation: 1 * Math.PI,
           circumference: 1 * Math.PI,
           responsive: true,
-          legend: { position: 'left',},
+          legend: { position: 'bottom',},
           title: { display: true, text: 'Pie Chart' },
           animation: { animateScale: true, animateRotate: true },
           cutoutPercentage: 70
@@ -141,7 +142,7 @@ export class AppDashboardComponent {
         rotation: 1 * Math.PI,
         circumference: 1 * Math.PI,
         responsive: true,
-        legend: { position: 'left',},
+        legend: { position: 'bottom',},
         title: { display: true, text: 'Polar Chart' },
         animation: { animateScale: true, animateRotate: true },
         cutoutPercentage: 70
@@ -157,8 +158,8 @@ export class AppDashboardComponent {
       data: {
           labels: ['Total Confirmed','Recovered','Death'  ],
           datasets: [{
-              label: 'Covid-19',
-              data: [this.newNc, this.newNr,this.newNd],
+              label: 'Confirm',
+              data: [this.newNc],
               weight:1,
               order:2,
               backgroundColor: [
@@ -166,17 +167,42 @@ export class AppDashboardComponent {
               ],
               borderColor: [
                 'rgba(255, 255, 74, 1)',
-                '#99FF33',
-                '#FF3333'  
+               
               ],
               borderWidth: 2
-          },], 
+          },
+          {
+            label: 'Recovered',
+            data:  [this.newNr],
+            weight:1,
+            order:2,
+            backgroundColor: [
+              '#99FF33' ,
+            ],
+            borderColor: [
+              '#99FF33'  
+            ],
+            borderWidth: 2
+        },
+        {
+          label: 'Death',
+          data: [this.newNd],
+          weight:1,
+          order:2,
+          backgroundColor: [
+            '#FF3333' ,
+          ],
+          borderColor: [
+            '#FF3333'  
+          ],
+          borderWidth: 2
+      }], 
       },
       options: {
         rotation: 1 * Math.PI,
         circumference: 1 * Math.PI,
         responsive: true,
-        legend: { position: 'left',},
+        legend: { position: 'bottom',},
         title: { display: true, text: 'Radar Chart', },
         animation: { animateScale: true, animateRotate: true },
         cutoutPercentage: 70
@@ -214,7 +240,7 @@ export class AppDashboardComponent {
         rotation: 1 * Math.PI,
         circumference: 1 * Math.PI,
         responsive: true,
-        legend: { position: 'left',},
+        legend: { position: 'bottom',},
         title: { display: true, text: 'Bar Chart', },
         animation: { animateScale: true, animateRotate: true },
         cutoutPercentage: 70

@@ -1,60 +1,21 @@
 
-.img-bg{
+.container{
     background-image: url("../../assets/image.png");
-    min-height: 660px;
+    min-height: 600px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-  
+    border-radius: 10px;
+    box-shadow: 2px 2px rgb(36, 36, 36);
   }
-  .Login-box
-  {
-    position: absolute;
-    right: 120px;
-    top: 80px;
-    margin: 20px;
-    max-width: 300px;
-    padding: 16px;
-    text-align: center;
-    background-color: rgba(212, 212, 212, 0.3);
-    color: black
-  
-  }
-  .Login-box h2
-  {
+ .card{
     color: white;
-    float: left;
-    font-size: 40px;
-    margin-bottom: 50px;
-    padding: 13px ;
-  }
-  .textbook
-  {
-    width: 100%;
-    overflow: hidden;
-    font-size: 20px;
-    border-radius: 5px;
-    padding:8px 0;
-    margin: 8px 0;
-    background-color: white;
-    border-bottom: 1px solid #4caf50;
-  }
-  .textbook i
-  {
-    width: 26px;
-    float: left;
-    text-align: center;
-  }
-  .textbook input
-  {
-    border: none;
-    outline: none;
-    background: none;
-    color: black;
-    font-size: 18px;
-    width: 80%;
-    float: left;
-    margin: 0 10px;
-  }
-  
+    background-color:#242B2E;
+    position: relative;
+    left: 30%;
+    top: 20%;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 2px 2px rgb(36, 36, 36);
+ }
