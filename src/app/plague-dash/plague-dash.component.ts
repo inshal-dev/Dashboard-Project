@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   templateUrl: './plague-dash.component.html',
   styleUrls: ['./plague-dash.component.css']
 })
-export class PlagueDashComponent implements OnInit {
+export class PlagueDashComponent{
   //Charts variable
   ctx:any;
   canvas:any;
@@ -18,7 +18,9 @@ export class PlagueDashComponent implements OnInit {
     
    }
  
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
     this.getPlague();
     Chart.defaults.global.defaultFontColor = 'white';
     setTimeout(()=>{

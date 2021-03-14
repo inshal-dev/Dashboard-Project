@@ -11,7 +11,7 @@
     height: 500px;
 }
 #card-sample{
-    
+   
     margin: 30px;
     padding: 20px;
     border-radius: 20px;
@@ -22,6 +22,10 @@ input{
     width: 400px;
     border: none;
     border-bottom: 1px solid #FFFEFE;
+   
+}
+input[placeholder]{
+    color: white;
 }
 textarea{
     height: 200px;
