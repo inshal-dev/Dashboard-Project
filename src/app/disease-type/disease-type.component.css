@@ -45,3 +45,7 @@ button{
     box-shadow: 1px 1px rgb(37, 37, 37);
     
 }
+@media screen and (max-height: 450px) {
+    .wrapper {padding-top: 15px;}
+    .card {font-size: 18px;}
+  }

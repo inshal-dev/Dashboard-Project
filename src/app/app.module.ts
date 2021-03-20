@@ -63,7 +63,6 @@ import { ProfileComponent } from './profile/profile.component';
     PlagueDashComponent,
     EbolaComponent,
     ProfileComponent,
-
     
   ],
   imports: [

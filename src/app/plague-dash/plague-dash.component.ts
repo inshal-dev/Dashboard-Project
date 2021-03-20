@@ -13,9 +13,7 @@ export class PlagueDashComponent{
   canvas:any;
   constructor(
     public plague: PlagueService
-
   ) {
-    
    }
  
   ngAfterViewInit(): void {
@@ -30,20 +28,21 @@ export class PlagueDashComponent{
       this.polarChart();
     },100)
   }
+
   totalData:any;
   years:any;
   confirmCases:any;
   deathCases:any;
   conData:any;
   parseData:any;
+
   getPlague(){
-    
      this.plague.GetPlague().toPromise().then((res)=>{
        this.totalData = res
        this.conData = JSON.stringify(Object(this.totalData))
        this.parseData = JSON.parse(this.conData) 
 
-      this.years = this.parseData.map((years:{Years:any})=>{
+       this.years = this.parseData.map((years:{Years:any})=>{
         return years.Years
       })
       console.log(this.years)

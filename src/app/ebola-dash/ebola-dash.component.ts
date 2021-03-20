@@ -34,7 +34,6 @@ export class EbolaDashComponent  {
   }
  
   ngAfterViewInit(): void {
- 
     this.DataPlagues();
     Chart.defaults.global.defaultFontColor = 'white';
     setTimeout(()=>{
@@ -58,7 +57,7 @@ export class EbolaDashComponent  {
       this.lineChartDeaths();
       this.barChart();
       this.horiChartDeaths();
-    },100);
+    },50);
   }
   DataPlagues(){
    
