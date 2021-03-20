@@ -10,11 +10,11 @@
     width: 0;
 }
 .wrapper::-webkit-scrollbar-thumb{
-    background: linear-gradient((transparent, #30ff00));
+    background: linear-gradient(( #30ff00));
     border-radius: 6px;
 }
 .wrapper::-webkit-scrollbar-thumb:hover{
-    background: linear-gradient((transparent, #30ff00));
+    background: linear-gradient(( #30ff00));
     
 }
 .wrapper .item{
@@ -23,7 +23,7 @@
 .card{
     padding: 20px;
     margin: 20px;
-    display: flex;
+    display: inline-block;
     border-radius: 20px;
     width: 350px;
     height: 400px ;
