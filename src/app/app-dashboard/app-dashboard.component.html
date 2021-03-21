@@ -49,9 +49,9 @@
         <div class="card container text-white" id="cards" style="width: 18rem;" *ngFor="let count of ConvertedData ">
           <div class="card-body ">
             <h5 class="card-title">{{count.Country}}</h5>
-            <h6 class="card-text ">{{count.Date | date}}</h6>
-            <p class="card-text">{{count.Confirmed |number}}</p>
-            <p class="card-text">{{count.Deaths | number}}</p>
+            <h6 class="card-text ">Date: {{count.Date | date}}</h6>
+            <p class="card-text">Confirm: {{count.Confirmed |number}}</p>
+            <p class="card-text">Death: {{count.Deaths | number}}</p>
           </div>
         </div>
       </div>

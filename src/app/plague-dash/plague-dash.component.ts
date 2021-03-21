@@ -45,15 +45,15 @@ export class PlagueDashComponent{
        this.years = this.parseData.map((years:{Years:any})=>{
         return years.Years
       })
-      console.log(this.years)
+      
       this.confirmCases = this.parseData.map((totalCases:{TotalCases:any})=>{
         return totalCases.TotalCases
       })
-      console.log(this.confirmCases)
+   
       this.deathCases = this.parseData.map((totaldeaths:{TotalDeaths:any})=>{
         return totaldeaths.TotalDeaths
       })
-      console.log(this.deathCases)
+
      })
  
   }

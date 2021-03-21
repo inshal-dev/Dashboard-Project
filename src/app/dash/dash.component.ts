@@ -46,7 +46,7 @@ export class DashComponent implements OnInit {
         this.data = JSON.parse(this.user);
         let globalData = this.data;
         this.newConfirm = globalData.Global.TotalConfirmed;
-        console.log(this.newConfirm)
+       
         this.newDeath = globalData.Global.TotalDeaths;
         this.mychart(this.newConfirm)
         this.linechart(this.newConfirm)

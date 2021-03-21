@@ -22,7 +22,7 @@ export class ReviewComponent implements OnInit {
   reviews: Review[] = [];
   ngOnInit(): void {
     this.Reservice.getReview().subscribe(review =>{
-        console.log(review);
+       
         this.reviews = review;
       
       })

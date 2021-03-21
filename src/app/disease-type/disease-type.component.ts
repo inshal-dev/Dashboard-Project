@@ -31,7 +31,7 @@ export class DiseaseTypeComponent implements OnInit {
   reviews: Review[]=[];
   ngOnInit(): void {
     this.Reservice.getReview().subscribe(review =>{
-      console.log(review);
+     
       this.reviews = review;
     });
   }

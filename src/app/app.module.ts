@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatSliderModule } from '@angular/material/slider';
-
+import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 import { DashComponent } from './dash/dash.component';
 import { DiseaseTypeComponent } from './disease-type/disease-type.component';
 import {InfoComponent} from './Covid/info.component'
@@ -88,7 +88,8 @@ import { ProfileComponent } from './profile/profile.component';
   ],
   exports: [RouterModule],
   providers: [ApiService,
-  PlagueService],
+  PlagueService,
+  {provide : LocationStrategy , useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
