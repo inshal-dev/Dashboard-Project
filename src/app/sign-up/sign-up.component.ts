@@ -56,4 +56,7 @@ export class SignUpComponent implements OnInit {
     )
   }
  
+  refresh(){
+    this.Register();
+  }
 }

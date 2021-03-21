@@ -15,7 +15,7 @@ export class DiseaseTypeComponent implements OnInit {
     "margin-right" : '10px',
   }
   buttonAlign:object = {
-    "margin-top":'30px', 
+    "margin-top":'10px', 
   }
   
   review(){

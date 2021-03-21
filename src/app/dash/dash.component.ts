@@ -5,6 +5,7 @@ import {HttpClient} from '@angular/common/http';
 import { Chart }  from 'chart.js';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-dash',
   templateUrl: './dash.component.html',
@@ -32,6 +33,10 @@ export class DashComponent implements OnInit {
     setTimeout(()=>{
       this.getCovid();
     },100);
+  }
+  refresh(){
+    window.location.reload();
+    this.ngOnInit();
   }
   
   getCovid(){
