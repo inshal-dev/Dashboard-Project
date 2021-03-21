@@ -2,19 +2,7 @@
 
 <div class="row text-center text-white">
 
-<div class="card-sample ">
-  <div class="card " style="width: 18rem; height: 20rem;">
-    <div class="card-body">
-      <h5 class="card-title">
-          <div class="chip">
-              {{form.value.diseaseType}}
-          </div>
-      </h5>
-      <p class="card-text">{{form.value.review}}</p>
-     
-    </div>
-  </div>
-</div>
+
 <div class="card" id="card-form">
   <h5 class="m-3">Add Sentiments</h5>
   <form [formGroup]="this.form" >
@@ -39,7 +27,19 @@
     </div>
 </form> 
 </div>
-
+<div class="card-sample">
+  <div class="card " >
+    <div class="card-body">
+      <h5 class="card-title">
+          <div class="chip">
+              {{form.value.diseaseType}}
+          </div>
+      </h5>
+      <p class="card-text">{{form.value.review}}</p>
+     
+    </div>
+  </div>
+</div>
   
 </div>
 

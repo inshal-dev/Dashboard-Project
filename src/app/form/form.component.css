@@ -1,6 +1,6 @@
 .card{
   border-radius: 10px;
-  margin: 60px;
+  margin: 10px;
   background-color: #474747;
   background-image: linear-gradient(70deg, #474747 0%, #565656 30%, #5e5d5d 66%, #686868 100%);
   box-shadow: 1px 1px rgb(19, 19, 19);
@@ -8,12 +8,14 @@
 #card-form{
     padding: 20px;
     width: 600px;
-    height: 500px;
+    height: auto;
 }
-#card-sample{
+.card-sample{
     margin: 30px;
     padding: 20px;
     border-radius: 20px;
+    width: 400px;
+    min-height: 450px;
    
 }
 input{

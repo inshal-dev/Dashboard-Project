@@ -82,7 +82,7 @@ export class DashComponent implements OnInit {
           circumference: 1 * Math.PI,
           responsive: true,
           legend: { position: 'left',},
-          title: { display: true, text: 'Major Pandemic Chart' },
+          title: { display: true, text: 'Cases of Pandemic Diseases Polar-Chart' },
           animation: { animateScale: true, animateRotate: true },
           cutoutPercentage: 70
       }
@@ -157,7 +157,7 @@ linechart(newConfirm:any){
           labels:{
             fontColor:'White'
           }, position: 'bottom',},
-        title: { display: true, text: 'Cases Of Pandemic Diseases' },
+        title: { display: true, text: 'Cases Of Pandemic Diseases Bar-Chart' },
         animation: { animateScale: true, animateRotate: true },
         cutoutPercentage: 70
     }
